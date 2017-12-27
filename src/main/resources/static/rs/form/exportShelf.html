@@ -1,0 +1,59 @@
+<div class="layui-row" id="exportShelf">
+	<div class="layui-col-md6" style="margin: 20px;">
+		<fieldset class="layui-elem-field">
+			<legend>物料库存列表：点击即选择</legend>
+			<div class="layui-field-box">
+				<table id="exportShelfGrid" lay-filter="exportShelfGrid"></table>
+			</div>
+		</fieldset>
+	</div>
+	<div class="layui-col-md5" style="margin: 20px;">
+		<fieldset class="layui-elem-field">
+			<legend>物料信息：请在列表选择后导入</legend>
+			<div class="layui-field-box">
+				<form class="layui-form widget-open-form-a" id="exportShelfForm">
+					<div class="layui-form-item">
+						<label class="layui-form-label">货架编号</label>
+						<div class="layui-input-block">
+							<input type="text" name="shelfCode" autocomplete="off" class="layui-input layui-disabled form-bgblack">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">货架名称</label>
+						<div class="layui-input-block">
+							<input type="text" name="shelfName" autocomplete="off" class="layui-input layui-disabled form-bgblack">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">物料編碼</label>
+						<div class="layui-input-block">
+							<input type="text" name="code" lay-verify="required" placeholder="待选择" autocomplete="off" class="layui-input layui-disabled form-bgblack">
+						</div>
+					</div>
+
+					<div class="layui-form-item">
+						<label class="layui-form-label">导入數量</label>
+						<div class="layui-input-block">
+							<input type="text" name="count" lay-verify="required|number" placeholder="待输入" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+
+					<div class="layui-form-item layui-form-text">
+						<label class="layui-form-label">物料描述</label>
+						<div class="layui-input-block">
+							<textarea name="name" placeholder="待选择" class="layui-textarea layui-disabled form-bgblack"></textarea>
+						</div>
+					</div>
+
+					<div class="layui-form-item">
+						<div class="layui-input-block">
+							<button class="layui-btn" lay-submit lay-filter="exportShelfForm">确定导出</button>
+							<!--<button type="reset" class="layui-btn layui-btn-primary">重置</button>-->
+						</div>
+					</div>
+				</form>
+			</div>
+		</fieldset>
+
+	</div>
+</div>

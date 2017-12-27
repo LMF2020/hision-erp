@@ -1,0 +1,10 @@
+.vscode
+.idea/
+.git/
+*.bak
+.gitee/
+/.classpath
+/.project
+/target/
+/.settings/
+/.mvn/

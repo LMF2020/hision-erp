@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Hision SMS</title>
+		<link rel="stylesheet" type="text/css" href="/rs/lib/layui/css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="/rs/css/frame.css" />
+		<link rel="stylesheet" type="text/css" href="/rs/css/scrollbar.css" />
+	</head>
+
+	<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+			<div class="layui-header">
+				<div class="layui-logo">宁波海天仓库货架管理</div>
+				<ul class="layui-nav layui-layout-left">
+					<li class="layui-nav-item">
+						<a id="clearShelfSelected"><i class="layui-icon" style="font-size: 30px; color: #1E9FFF;">&#xe639;</i></a>
+					</li>
+				</ul>
+				<ul class="layui-nav layui-layout-right">
+					<li class="layui-nav-item">
+						<a id="searchShelfViaMa"><i class="layui-icon" style="font-size: 30px; color: #1E9FFF;">&#xe615;</i> 物料查询</a>
+					</li>
+					<li class="layui-nav-item">
+						<a id="batchImportMaterial"><i class="layui-icon" style="font-size: 30px; color: #1E9FFF;">&#xe681;</i> 批量导入</a>
+					</li>
+					<li class="layui-nav-item">
+						<a id="addMaterial"><i class="layui-icon" style="font-size: 30px; color: #1E9FFF;">&#xe61f;</i> 增加物料</a>
+					</li>
+					<li class="layui-nav-item">
+						<a id="addShelf"><i class="layui-icon" style="font-size: 30px; color: #1E9FFF;">&#xe61f;</i> 增加货架</a>
+					</li>
+					<li class="layui-nav-item">
+						<a id="settings"><i class="layui-icon" style="font-size: 30px; color: #1E9FFF;">&#xe631;</i> 設置</a>
+					</li>
+				</ul>
+			</div>
+			<div id="desk" class="layui-body layui-bg-cyan demo-sc" style="left: 0;overflow-x: auto;">
+				<!-- main Content start-->
+				<!-- main Content end-->
+			</div>
+			<div class="layui-footer footer copyright-custom">
+				<p>Copyright (C) 2017- 版权所有：宁波海天精工股份有限公司 All Rights Reserved</p>
+				<!--<p>电话： 传真：0574-86182518 地址：中国宁波大港工业城黄山西路235号</p>	-->
+			</div>
+		</div>
+
+		<script src="/rs/lib/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/rs/js/frame.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- ##### 定义模板 ####-->
+		<script id="desktpl" type="text/html">
+			{{# layui.each(d.rowList, function(index, row){ }}
+			<ul class="flow-default row-1st">
+
+				{{# layui.each(row, function(index, col){ }}
+				<li class="layui-bg-cyan widget-wrapper" id="{{col.id}}">
+					<div class="imgDiv">
+						<img src="/rs/img/remove_32x32.png" class="delete" data-name="{{col.code}}" data-id="{{col.id}}"/>
+					</div>
+					<div class="widget-content">
+						<h1 class="widget-title">{{col.code}}</h1>
+						<div class="no-text">NO.{{col.ordering}}</div>
+					</div>
+					<div class="layui-btn-group" data-id="{{col.id}}" data-name="{{col.code}}">
+						<a class="widget-space op-import"><img src="/rs/img/import_32x32.png"></a>
+						<a class="widget-space op-export"><img src="/rs/img/export_32x32.png"></a>
+						<a class="widget-space op-search"><img src="/rs/img/search_32x32.png"></a>
+						<a class="widget-space op-edit"><img src="/rs/img/edit_32x32.png"></a>
+					</div>
+				</li>
+				{{# }); }}
+
+			</ul>
+			{{# }); }}
+		</script>
+
+		<!--- 定义表格工具栏 -->
+		<script type="text/html" id="selectGridRow">
+			<a class="layui-btn layui-btn-mini" lay-event="edit">选取</a>
+		</script>
+
+	</body>
+
+</html>

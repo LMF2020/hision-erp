@@ -1,0 +1,31 @@
+/*滚动条整体部分*/
+.demo-sc::-webkit-scrollbar{
+  width: 7px;
+  height: 7px;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+}
+/*滚动条两端的箭头*/
+.demo-sc::-webkit-scrollbar-button{
+  display: none;
+}
+/*经测试好像并不能控制什么*/
+.demo-sc::-webkit-scroll-track{
+  display: none;
+}
+/*滚动条内侧部分 去掉*/
+.demo-sc::-webkit-scrollbar-track-piece {
+  display: none;
+}
+/*滚动条中可以拖动的那部分*/
+.demo-sc::-webkit-scrollbar-thumb{
+  background-color: green;
+  border-radius: 4px;
+}
+/*变角部分*/
+.demo-sc::-webkit-scrollbar-corner {
+  display: none;
+}
+.demo-sc::-webkit-resizer{
+  display: none;
+}

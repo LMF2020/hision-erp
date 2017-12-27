@@ -1,0 +1,37 @@
+<!-- # 基本設置 start--->
+<form class="layui-form widget-open-form-a" id="formSettings">
+	<div class="layui-form-item">
+		<label class="layui-form-label">貨位行數</label>
+		<div class="layui-input-inline">
+			<input type="text" name="row" value="4" lay-verify="required|number" placeholder="請輸入行數" autocomplete="off" class="layui-input">
+		</div>
+		<div class="layui-form-mid layui-word-aux">行數無限制</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label">貨位列數</label>
+		<div class="layui-input-inline">
+			<input type="text" name="col" value="24" lay-verify="required|number" placeholder="請輸入列數" autocomplete="off" class="layui-input">
+		</div>
+		<div class="layui-form-mid layui-word-aux">該版本最大支持30列</div>
+	</div>
+
+	<div class="layui-form-item">
+		<div class="layui-input-block">
+			<button class="layui-btn" lay-submit lay-filter="formSettings">立即生效</button>
+			<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+		</div>
+	</div>
+	<!-- 
+	<div class="layui-form-item">
+		<div class="layui-input-block">
+			<button class="layui-btn" id="clearShelvesData"><i class="layui-icon">&#xe639;</i> 清空貨位數據,慎用</button>
+		</div>
+	</div>
+
+	<div class="layui-form-item">
+		<div class="layui-input-block">
+			<button class="layui-btn" id="clearMaterialData"><i class="layui-icon">&#xe639;</i> 清空物料數據,慎用</button>
+		</div>
+	</div> -->
+</form>
+<!-- # 基本設置 end--->
