@@ -1,15 +1,20 @@
-# 简介
-
-本压缩包是一个maven工程, eclipse/idea均可按maven项目导入
-
-MainLauncher是入口,启动即可
-
-## 环境要求
-
-* 必须JDK8
-* eclipse或idea等IDE开发工具,可选
-
-## 配置信息位置
-
-数据库配置信息,jetty端口等配置信息,均位于src/main/resources/application.properties
-
+# 简单ERP管理系统
+## 简要概述：
+货架，货仓管理，简单的erp管理系统，很Cool，客户反映很好。
+## 业务需求：
+* 物料查询，
+* 批量导入，
+* 货架设置，
+* 添加物料、物料上架、物料下架、货位之间导入物料
+* 数据库配置下，自动建库表，开箱即用
+## 运行效果图：
+1. 物料查询
+![image 物料查询](https://github.com/LMF2020/hision-erp/raw/master/doc/img/main.png)
+2. 物料上架
+![image 物料上架](https://github.com/LMF2020/hision-erp/raw/master/doc/img/imp.png)
+3. 货架设置
+![image 货架设置](https://github.com/LMF2020/hision-erp/raw/master/doc/img/setting.png)
+4. 添加物料
+![image 添加物料](https://github.com/LMF2020/hision-erp/raw/master/doc/img/add.png)
+5. 批量导入
+![image 批量导入](https://github.com/LMF2020/hision-erp/raw/master/doc/img/batch_imp.png)
